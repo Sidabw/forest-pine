@@ -32,7 +32,7 @@
         * 故而目的就是不会使得当前代码导入运行的时候，运行两次。
 if __name__ == '__main__':
 
-![image](/Users/feiyi/Desktop/Screen Shot 2019-12-24 at 5.29.09 PM.png)
+![image](https://github.com/Sidabw/forest-py/blob/master/py-mac/1py-test/test/Screen%20Shot%202019-12-24%20at%205.29.09%20PM.png)
 
 
 
