@@ -28,6 +28,7 @@ print employee1.age
 # del employee1.age
 # print employee1.age   # 报错：Employee instance has no attribute 'age'
 
+print '-----'
 # 调用函数访问类实例变量
 print hasattr(employee1, 'age')
 print getattr(employee1, 'age')

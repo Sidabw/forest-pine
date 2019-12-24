@@ -33,7 +33,7 @@ class Mother:
 
 class Child(Parent, Mother):
 
-    __private_att = 0   # 私有变量，不可再外部直接访问。方有方法亦同。开头加双下划线。
+    __private_att = 0   # 私有变量，不可再外部直接访问。私有方法亦同。开头加双下划线。
 
     def __init__(self):
         print "调用了子类的init"
