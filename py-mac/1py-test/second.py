@@ -14,7 +14,7 @@ print(str(12.34))
 print(bool(1))  # true
 print(bool('avc'))  # true
 print(bool(0))  # false
-print (bool(None))  # false
+print(bool(None))  # false
 print(bool(''))  # false
 # 函数名只是一个函数对象的引用
 a = abs
@@ -26,7 +26,7 @@ print('⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇ "自定义函数 异常处理 
 
 
 def my_abs(x):
-    """进行参数校验"""    # 函数首行注释
+    """进行参数校验"""  # 函数首行注释
     if not isinstance(x, (int, float)):
         raise TypeError('你还不给老子赶忙输入数字！！！')  # 抛出异常,自定义异常信息
     if x > 0:
@@ -38,19 +38,24 @@ def my_abs(x):
 # try:... except *Error:... else:...
 try:
     print(my_abs('a'))
-except TypeError, error:    # 追加获得异常信息,BaseException是所有异常的基类
-    print error;
-except:     # 异常只会被捕获一次
-    print "抓住了异常"
+except TypeError, error:  # 追加获得异常信息,BaseException是所有异常的基类
+    print
+    error
+except:  # 异常只会被捕获一次
+    print
+    "抓住了异常"
 else:
-    print "没有异常发生时 会执行lse"
+    print
+    "没有异常发生时 会执行else"
 finally:
-    print "finally code...."
+    print
+    "finally code...."
 # print(my_abs('abc'))
 if 5 > 6:
     pass  # pass意味着什么都不做，跟continue没关系
-else :
-    print 'aaa'
+else:
+    print
+    'aaa'
 print
 
 # 返回多值时实际上返回的是一个元组
@@ -63,17 +68,23 @@ print('⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇ 必备参数、默认参数 - 
 
 
 def enroll(name, gender, age=10, address='北京'):
-    print '**********'
-    print 'name:', name
-    print 'gender', gender
-    print 'age', age
-    print 'address', address
-    print '**********'
+    print
+    '**********'
+    print
+    'name:', name
+    print
+    'gender', gender
+    print
+    'age', age
+    print
+    'address', address
+    print
+    '**********'
 
 
 enroll('abc', 'man', 12, '南京')
 enroll('aa', 'women')
-enroll('aaaaaa', 1234, address='上海')    # 默认参数必须放在必备参数后面
+enroll('aaaaaa', 1234, address='上海')  # 默认参数必须放在必备参数后面
 print
 
 print('⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇ "自定义函数[默认参数 陷阱] - start"⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇-')
@@ -133,7 +144,9 @@ person('zhangsan', 12)
 # 关键字参数，实际上是一个dict
 person('lissi', 13, address='北京', gender='women')
 dicttest = {'address': '北京', 'gender': 'women'}
-person('wangwu', 14, **dicttest)    # 同可变参数一样，调用时都需要额外加* 或 **
+person('wangwu', 14, **dicttest)  # 同可变参数一样，调用时都需要额外加* 或 **
+
+
 # 参数定义/传递顺序：必选参数，默认参数，可变参数，关键字参数
 
 
@@ -150,53 +163,59 @@ a = 1
 
 
 def aaa():
-    global a    # 表明这是一个全局变量，所以py就从全局变量中取了。
-    a = a +1
+    global a  # 表明这是一个全局变量，所以py就从全局变量中取了。
+    a = a + 1
     return a
 
 
-print aaa()
+print
+aaa()
 print('⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇ "匿名函数 - start"⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇-')
 sum = lambda arg1, arg2: arg1 + arg2
-print "arg1 + arg2 等于：", sum(1, 2)
+print
+"arg1 + arg2 等于：", sum(1, 2)
 print
 
 
 def funTest(a):
     if a is not 1:
         return
-    print a
+    print
+    a
 
 
-print funTest(2)    # 无反回值的return 返回 None
+print
+funTest(2)  # 无反回值的return 返回 None
+
 
 def fact(n):
     "py递归"
     if n == 1:
         return 1
-    return n+fact(n-1)
+    return n + fact(n - 1)
 
 
-print('digui 500 result:', fact(500))    # 传入1000会导致栈溢出。每调用一次，加一层栈帧，函数每返回一次，就减一次栈帧；
+print('digui 500 result:', fact(500))  # 传入1000会导致栈溢出。每调用一次，加一层栈帧，函数每返回一次，就减一次栈帧；
 
-
-print '⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇ "list/String/tuple sub操作 - start"⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇-'
+print
+'⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇ "list/String/tuple sub操作 - start"⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇-'
 r = [1, 2, 3, 4]
-print(r[0:3])   # 切片操作，同样是包头不包尾
-print(r[-2:])   # 倒叙切片，取倒数第1个、倒数第二个，两个元素
+print(r[0:3])  # 切片操作，同样是包头不包尾
+print(r[-2:])  # 倒叙切片，取倒数第1个、倒数第二个，两个元素
 print('abc'[0:1])
 print((1, 2, 3)[0:1])
 print((1, 2, 3)[0:2])
 print
 
-print '⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇ "list/string/dic 迭代操作 - start"⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇-'
+print
+'⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇ "list/string/dic 迭代操作 - start"⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇-'
 r = [1, 2, 3, 4]
 dicttest2 = {'dicA': 1, 'dicB': 2}
-for key in dicttest2:   # 迭代dic的key，无序。同HashMap
+for key in dicttest2:  # 迭代dic的key，无序。同HashMap
     print(key)
     print(dicttest2.get(key))
 
-for value in dicttest2.itervalues():    # 迭代dict的value
+for value in dicttest2.itervalues():  # 迭代dict的value
     print(value)
 
 for item in dicttest2.iteritems():
@@ -206,79 +225,92 @@ for ch in 'abcdefg':
     print(ch)
 print
 
-print '⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇ "isinstance/range/enumerate函数使用。 list/tuple 生成器 - start"⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇-'
-print range(7)
-print range(2, 10, 2)   # range(start, end, step)
-print(isinstance(123, Iterable))    # 需要 from collections import Iterable
+print
+'⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇ "isinstance/range/enumerate函数使用。 list/tuple 生成器 - start"⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇-'
+print
+range(7)
+print
+range(2, 10, 2)  # range(start, end, step)
+print(isinstance(123, Iterable))  # 需要 from collections import Iterable
 print(isinstance('abc', Iterable))
 # 如果遍历list并且每次都想拿到下标，可以这么操作：
 r = [3, 4, 5]
 for i in enumerate(r, 1):  # 枚举 list 之后，会得到一个由duple组成的list：[(0,3), (1, 4), (2, 5)]每一个duple第一个元素的list的角标，第二个元素是list的value
-    print i     # 输出该元祖
-    print i[1]
-print "---"
+    print
+    i  # 输出该元祖
+    print
+    i[1]
+print
+"---"
 # or
 for i in range(len(r)):
-    print i
-    print r[i]
-print "---"
+    print
+    i
+    print
+    r[i]
+print
+"---"
 
 LLL = []
 for i in range(1, 11):  # range(start, end) -> [start, ... ,end-1]
     LLL.append(i * i)
 print(LLL)
-print "---"
+print
+"---"
 
 # 列表生成器
 print([num * num for num in range(1, 11)])
-print([m + n for m in 'ABC' for n in 'XYZ'])    # 双重并列循环，生成全排列
-print ([d for d in os.listdir('.')])     # 输出os模块.目录即当前目录下的所有entity
+print([m + n for m in 'ABC' for n in 'XYZ'])  # 双重并列循环，生成全排列
+print([d for d in os.listdir('.')])  # 输出os模块.目录即当前目录下的所有entity
 
 Ltest = ['abc', 12, 'dEF']
-print([i.lower() for i in Ltest if isinstance(i, str)])     # 加判断的列表生成器.str/list/int 都是关键字
+print([i.lower() for i in Ltest if isinstance(i, str)])  # 加判断的列表生成器.str/list/int 都是关键字
 # tuple生成器
-LLtest = (num for num in range(10))     # 获得的是该tuple的迭代器
+LLtest = (num for num in range(10))  # 获得的是该tuple的迭代器
 print(LLtest.next())
 print(LLtest.next())
 print(LLtest.next())
-print "-----"
+print
+"-----"
 for num in LLtest:  # 可以直接遍历迭代器。但其起始位置可能已经发生了变化。
     print(num)
 
+print
+"进阶系列........ 不想看系列..."
 
-print "进阶系列........ 不想看系列..."
 
-
-def fib(max):       #斐波拉契数列 1, 1, 2, 3, 5, 8, 13, 21, 34, ...
+def fib(max):  # 斐波拉契数列 1, 1, 2, 3, 5, 8, 13, 21, 34, ...
     n, a, b = 0, 0, 1
     while n < max:
         print(b)
-        a, b = b, a+b   #可以理解为a、b都是同时读入，等都计算完之后，再往回写
+        a, b = b, a + b  # 可以理解为a、b都是同时读入，等都计算完之后，再往回写
         print('verify:', a, b)
         n = n + 1
 
 
 print('--------------')
-#fib(10)
+
+
+# fib(10)
 
 
 def fib2(max):
     n, a, b = 0, 0, 1
     while n < max:
-        yield b         #使用yield关键字变成1个generator
-        a, b = b, a+b
+        yield b  # 使用yield关键字变成1个generator
+        a, b = b, a + b
         n = n + 1
 
 
 print(fib2(10))
 
 
-def odd():      #这是1个generator 每次next会在执行到yield时退出，下次执行从上次退出的地方继续执行
+def odd():  # 这是1个generator 每次next会在执行到yield时退出，下次执行从上次退出的地方继续执行
     print('step 1')
     yield 1
     print('step 3')
     yield 3
-    print ('step 5')
+    print('step 5')
     yield 5
 
 

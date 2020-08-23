@@ -12,8 +12,10 @@ import codecs, sys
 
 encode = codecs.utf_16_encode
 
+
 def decode(input, errors='strict'):
     return codecs.utf_16_decode(input, errors, True)
+
 
 class IncrementalEncoder(codecs.IncrementalEncoder):
     def __init__(self, errors='strict'):
@@ -50,6 +52,7 @@ class IncrementalEncoder(codecs.IncrementalEncoder):
             else:
                 self.encoder = codecs.utf_16_be_encode
 
+
 class IncrementalDecoder(codecs.BufferedIncrementalDecoder):
     def __init__(self, errors='strict'):
         codecs.BufferedIncrementalDecoder.__init__(self, errors)
@@ -72,6 +75,7 @@ class IncrementalDecoder(codecs.BufferedIncrementalDecoder):
         codecs.BufferedIncrementalDecoder.reset(self)
         self.decoder = None
 
+
 class StreamWriter(codecs.StreamWriter):
     def __init__(self, stream, errors='strict'):
         codecs.StreamWriter.__init__(self, stream, errors)
@@ -92,6 +96,7 @@ class StreamWriter(codecs.StreamWriter):
         else:
             return self.encoder(input, errors)
 
+
 class StreamReader(codecs.StreamReader):
 
     def reset(self):
@@ -108,9 +113,10 @@ class StreamReader(codecs.StreamReader):
             self.decode = codecs.utf_16_le_decode
         elif byteorder == 1:
             self.decode = codecs.utf_16_be_decode
-        elif consumed>=2:
-            raise UnicodeError,"UTF-16 stream does not start with BOM"
+        elif consumed >= 2:
+            raise UnicodeError, "UTF-16 stream does not start with BOM"
         return (object, consumed)
+
 
 ### encodings module API
 

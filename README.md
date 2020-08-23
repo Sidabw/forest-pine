@@ -31,8 +31,13 @@
         * 其他模块导入此模块，运行，__name__为module
         * 故而目的就是不会使得当前代码导入运行的时候，运行两次。
 if __name__ == '__main__':
+    * --init--.py的作用
+        * 用来标识当前目录是一个python module , 这样就可以import当前包的python类了。
+        * import当前包之后，__init__.py会先执行。
 
 ![image](https://github.com/Sidabw/forest-py/blob/master/py-mac/1py-test/test/Screen%20Shot%202019-12-24%20at%205.29.09%20PM.png)
+
+    
 
 
 

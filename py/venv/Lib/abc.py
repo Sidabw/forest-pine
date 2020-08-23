@@ -7,8 +7,11 @@ import types
 
 from _weakrefset import WeakSet
 
+
 # Instance of old-style class
 class _C: pass
+
+
 _InstanceType = type(_C())
 
 
@@ -63,7 +66,6 @@ class abstractproperty(property):
 
 
 class ABCMeta(type):
-
     """Metaclass for defining Abstract Base Classes (ABCs).
 
     Use this metaclass to create an ABC.  An ABC can be subclassed
@@ -78,7 +80,7 @@ class ABCMeta(type):
 
     """
 
-    # A global counter that is incremented each time a class is
+    # A global counter.py that is incremented each time a class is
     # registered as a virtual subclass of anything.  It forces the
     # negative cache to be cleared before its next use.
     _abc_invalidation_counter = 0
@@ -87,8 +89,8 @@ class ABCMeta(type):
         cls = super(ABCMeta, mcls).__new__(mcls, name, bases, namespace)
         # Compute set of abstract method names
         abstracts = set(name
-                     for name, value in namespace.items()
-                     if getattr(value, "__isabstractmethod__", False))
+                        for name, value in namespace.items()
+                        if getattr(value, "__isabstractmethod__", False))
         for base in bases:
             for name in getattr(base, "__abstractmethods__", set()):
                 value = getattr(cls, name, None)
@@ -119,7 +121,7 @@ class ABCMeta(type):
     def _dump_registry(cls, file=None):
         """Debug helper to print the ABC registry."""
         print >> file, "Class: %s.%s" % (cls.__module__, cls.__name__)
-        print >> file, "Inv.counter: %s" % ABCMeta._abc_invalidation_counter
+        print >> file, "Inv.counter.py: %s" % ABCMeta._abc_invalidation_counter
         for name in sorted(cls.__dict__.keys()):
             if name.startswith("_abc_"):
                 value = getattr(cls, name)
@@ -137,8 +139,8 @@ class ABCMeta(type):
             subtype = subclass
         if subtype is subclass or subclass is None:
             if (cls._abc_negative_cache_version ==
-                ABCMeta._abc_invalidation_counter and
-                subtype in cls._abc_negative_cache):
+                    ABCMeta._abc_invalidation_counter and
+                    subtype in cls._abc_negative_cache):
                 return False
             # Fall back to the subclass check.
             return cls.__subclasscheck__(subtype)

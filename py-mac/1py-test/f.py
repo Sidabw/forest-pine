@@ -2,8 +2,10 @@
 # -*-coding:utf-8 -*-
 import math
 
-print "hello world"
-print "你好"
+print
+"hello world"
+print
+"你好"
 # 初识python代码格式
 a = 32
 if a > 50:
@@ -30,49 +32,53 @@ print(dyvar)
 
 print('⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇ "String - start" ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇')
 # 字符串截取中的[s:e] start or end 任意一方为空则表示取到头或尾
-print (dyvar[0:2])  # 字符串截取，同样包头不包尾
-print (dyvar[1])    # 输出角标为1
-print (dyvar[0])
-print (dyvar[-1])   # -1角标对应( length - 1)角标。
-print (dyvar[:1])   # 输出,同样包头不包尾
-print (dyvar[1:])   # 输出角标为1一直到最后
-print dyvar * 2     # 表示该字符串输出两次
-print dyvar + " and brew"
+print(dyvar[0:2])  # 字符串截取，同样包头不包尾
+print(dyvar[1])  # 输出角标为1
+print(dyvar[0])
+print(dyvar[-1])  # -1角标对应( length - 1)角标。
+print(dyvar[:1])  # 输出,同样包头不包尾
+print(dyvar[1:])  # 输出角标为1一直到最后
+print
+dyvar * 2  # 表示该字符串输出两次
+print
+dyvar + " and brew"
 # 字符串转int
 inttest = '123'
-print(inttest > 124)    # true   dont know why
-print(int(inttest) > 124)   # false
+print(inttest > 124)  # true   dont know why
+print(int(inttest) > 124)  # false
 print
 
 print('⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇"list - start" ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇')
 # 列表截取用法同字符串截取相同
 lsit1 = [1, 2, 3]
-print(lsit1[0:1])    # 切片操作
+print(lsit1[0:1])  # 切片操作
 print(len(lsit1))
-print(lsit1[-2])   # 打印倒数第二个
+print(lsit1[-2])  # 打印倒数第二个
 list2 = ['a', 'b', 'c']
-list2 = lsit1 + list2     # 同append用法相同
-print list2
+list2 = lsit1 + list2  # 同append用法相同
+print
+list2
 list2.append('avc')
-print list2
-print(list2[4])     # list中可以同时有整形、字符串、布尔、list等。即数据类型可以不一致
-list2.insert(1, 2)   # 同ArrayList中的add(index,element);
-list2.pop(1)    # 删除指定索引的元素
-list2.pop()     # 删除最后1个元素
+print
+list2
+print(list2[4])  # list中可以同时有整形、字符串、布尔、list等。即数据类型可以不一致
+list2.insert(1, 2)  # 同ArrayList中的add(index,element);
+list2.pop(1)  # 删除指定索引的元素
+list2.pop()  # 删除最后1个元素
 list2[2] = ['abc', 1, True]  # 二维数组
-print list2
+print
+list2
 print
 
-
 print('⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇ "tuple - start" ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇')
-tupletest = (1, 2, 3)     # 定义1个元组，其内容不可以改变
+tupletest = (1, 2, 3)  # 定义1个元组，其内容不可以改变
 tupletest2 = (2,)
 print(tupletest)
 print(tupletest2)
 # 报错：tupletest[1] = 0
 tupletest3 = (1, 2, [1, 2, 3])
 tupletest3[2][1] = 5
-print(tupletest3)   # 元组内容不可变，实质上说的是引用不可变
+print(tupletest3)  # 元组内容不可变，实质上说的是引用不可变
 # 初识for循环
 for num in tupletest3:
     print(num)
@@ -80,15 +86,16 @@ print
 
 print('⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇ "dict - start" ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇')
 # 上边是基础语法和list、元组，下边是map和set，在py里map叫做字典dict
-dicttest = {'sida': '老大','brew': '老小','test': 12}   # 同样支持不同类型
+dicttest = {'sida': '老大', 'brew': '老小', 'test': 12}  # 同样支持不同类型
 print(dicttest['sida'])
 print(dicttest['test'])
-dicttest['sida2'] = "老大2"   # add/push操作
-print dicttest['sida2']
-print('sida' in dicttest)   # 判断key是否存在
+dicttest['sida2'] = "老大2"  # add/push操作
+print
+dicttest['sida2']
+print('sida' in dicttest)  # 判断key是否存在
 print(dicttest.get('sidaa', 1))  # 如果key不存在，返回指定值
 print(dicttest.get('test'))
-dicttest.pop('test')    # 删除指定的key-value
+dicttest.pop('test')  # 删除指定的key-value
 print(dicttest.get('test'))  # 会打印 None
 print
 
@@ -98,11 +105,11 @@ print(settest)
 settest.add(3)  # set 不可重复，添加重复元素无作用
 settest.remove(5)
 print(settest)
-s1 = set([1,2,3])
-s2 = set([2,3,4])
+s1 = set([1, 2, 3])
+s2 = set([2, 3, 4])
 print(s1 & s2)  # 取两个set的并集
 print(s1 | s2)  # 取两个set的交集
-fset = frozenset(s1 | s2)   # 创建一个不可变集合。
+fset = frozenset(s1 | s2)  # 创建一个不可变集合。
 # s1.add([34,5])    # 会报错，同dic一样，key只能是string这一类不可变元素，而不能是list这一类可变元素
 print
 
@@ -120,47 +127,56 @@ print('⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇ "运算符 - start" ⬇⬇⬇�
 list = [11, 22, 33, 44]
 a = 11
 b = 12
-print (a in list)
-print (b not in list)
+print(a in list)
+print(b not in list)
 c = 11
-print (a is c)
-print (a == c)
+print(a is c)
+print(a == c)
 print
 
 print('⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇ "条件语句 - start"⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇ ')
-# python指定任何非null值和非0 为true。 null 或 0 为 false
+# python指定 null 或 0 为 false
 b = 0
 if b or a:
-    print "hahah"
+    print
+    "hahah"
 elif a:
-    print "heheh"
-print "python 不支持 switch case"
+    print
+    "heheh"
+print
+"python 不支持 switch case"
 print
 
 print('⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇ "循环语句 - start" ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇ ')
 print
 a = 1
 while a == 1:
-# b = raw_input("请输入一个数字")
+    # b = raw_input("请输入一个数字")
     a = int(b)
     if a == 3:
         continue
     elif a == 2:
         break
     else:
-        print "......"
+        print
+        "......"
 else:
-    print "while 循环执行完了。。。"
+    print
+    "while 循环执行完了。。。"
 # 是的，没看错，python可以写 while/for...else...   这里的else表示正常执行完后执行的语句，break跳出循环时不执行...  好鸡肋啊...
 
 for letter in 'sida':
-    print letter;print  # 加个; 把两行代码写到一行里
+    print
+    letter;
+    print  # 加个; 把两行代码写到一行里
 
 for index in range(5):  # 结果是 0 1 2 3 4
-    print 'sidaa'[index]
+    print
+    'sidaa'[index]
 
 # pass 只有占位的作用。比如定义了一个空函数，此时就需要一个pass占位 不然报错
 print
 print('⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇"math - start"⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇')
-print dir(math)
+print
+dir(math)
 a = 'aaa'
