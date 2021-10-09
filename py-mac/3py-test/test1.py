@@ -44,3 +44,4 @@ cursor.rowcount
 
 # delete
 # 同上...  sql = "delete from user where id =3"
+
