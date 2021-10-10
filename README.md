@@ -1,5 +1,5 @@
 # forest-py
-
+> pine 松树🌲·
 * python简介
     * python是一门解释型语言，即没有编译环节。python也是面向对象的。
     * python数据类型(只是说创建变量是不需要什么变量类型)，Number、String、List、Tuple(元组)、Dictionary(dict 字典)
