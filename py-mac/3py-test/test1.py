@@ -3,6 +3,8 @@ import MySQLdb
 import sys
 
 # mysql 使用学习
+# 升级到python3了，用不了了。安装MySQLdb会失败
+# https://stackoverflow.com/questions/14087598/python-3-importerror-no-module-named-configparser
 
 # 解决乱码异常。
 reload(sys)
