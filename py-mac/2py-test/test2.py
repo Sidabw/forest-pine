@@ -7,16 +7,13 @@ class Parent:
     parentAttr = 100
 
     def __init__(self):
-        print
-        "调用了父类的init"
+        print("调用了父类的init")
 
     def parent_method(self):
-        print
-        "调用了父类的method"
+        print("调用了父类的method")
 
     def parent_method_override(self):
-        print
-        "你可能要override该方法"
+        print("你可能要override该方法")
 
     def set_attr(self, attr):
         Parent.parentAttr = attr
